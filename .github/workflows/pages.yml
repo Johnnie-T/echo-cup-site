@@ -32,10 +32,10 @@ jobs:
       - name: 自检
         run: python scripts/verify.py
 
-      - name: 配置 Pages（首次会自动开启）
+      # 注意：Pages 需要在仓库 Settings → Pages 里手动开启一次
+      # （Source 选 "GitHub Actions"），GITHUB_TOKEN 没有管理员权限去自动开启
+      - name: 配置 Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: 上传 dist 目录
         uses: actions/upload-pages-artifact@v3
