@@ -1,0 +1,5 @@
+# 统一换行：仓库里存 LF，Windows 检出时按需转换
+* text=auto
+
+*.bat text eol=crlf
+*.cmd text eol=crlf

@@ -1,0 +1,95 @@
+{
+  "site": {
+    "name": "回声杯 · 示例站",
+    "tagline": "同一批小说，人类和 AI 各评一次",
+    "intro": "这是一个最小静态站的演示：正文写在 content/ 的 Markdown 里，元数据写在 data/works.json 里，运行 python scripts/build.py 生成 dist/ 下的静态页面。全站没有数据库、没有后端，双击 dist/index.html 就能打开。",
+    "footer": "演示站点 · 作品、作者与奖项均为虚构示例，请勿当作真实评奖结果。",
+    "repo": "https://github.com/"
+  },
+  "works": [
+    {
+      "id": "hui-sheng-ji-yuan",
+      "title": "回声纪元",
+      "author": "示例作者 · 甲",
+      "words": 49000,
+      "summary": "一台在木星轨道上自言自语了三十七年的记录仪，和一个把它的话抄在纸上的人。",
+      "file": "001-hui-sheng-ji-yuan.md",
+      "human": "特别奖",
+      "humanPrize": 30000,
+      "ai": "特别奖",
+      "aiPrize": 32768,
+      "rod": false,
+      "aiAssisted": true
+    },
+    {
+      "id": "zhuan-sheng-xie-yi",
+      "title": "转生协议",
+      "author": "示例作者 · 乙",
+      "words": 7800,
+      "summary": "把意识上传这件事，写成一份需要双方签字的合同。",
+      "file": "002-zhuan-sheng-xie-yi.md",
+      "human": "一等奖",
+      "humanPrize": 30000,
+      "ai": "一等奖",
+      "aiPrize": 16384,
+      "rod": false,
+      "aiAssisted": false
+    },
+    {
+      "id": "jing-mo-pin-lv",
+      "title": "静默频率",
+      "author": "示例作者 · 丙",
+      "words": 14000,
+      "summary": "语言消失的时候，从来没有人听见那一声响。",
+      "file": "003-jing-mo-pin-lv.md",
+      "human": "三等奖",
+      "humanPrize": 10000,
+      "ai": "三等奖",
+      "aiPrize": 4096,
+      "rod": true,
+      "aiAssisted": true
+    },
+    {
+      "id": "ming-tian-de-jia-ge",
+      "title": "所有明天的价格",
+      "author": "示例作者 · 丁",
+      "words": 12000,
+      "summary": "时间被打包成期货，明天是可以抵押的，而穷人只能按天卖。",
+      "file": "004-ming-tian-de-jia-ge.md",
+      "human": "二等奖",
+      "humanPrize": 20000,
+      "ai": null,
+      "aiPrize": 0,
+      "rod": false,
+      "aiAssisted": true
+    },
+    {
+      "id": "ta-shuo-ta-ji-de-hai",
+      "title": "她说她记得海",
+      "author": "示例作者 · 戊",
+      "words": 24000,
+      "summary": "一个从没见过海的人，坚持说海是她记忆里最清楚的地方。",
+      "file": "005-ta-shuo-ta-ji-de-hai.md",
+      "human": null,
+      "humanPrize": 0,
+      "ai": "二等奖",
+      "aiPrize": 8192,
+      "rod": false,
+      "aiAssisted": false
+    },
+    {
+      "id": "qi-dian-xian",
+      "title": "起点线",
+      "author": "示例作者 · 己",
+      "words": 14000,
+      "summary": "所有的比赛都有终点，除了这一场。",
+      "file": "006-qi-dian-xian.md",
+      "human": null,
+      "humanPrize": 0,
+      "ai": "三等奖",
+      "aiPrize": 4096,
+      "rod": true,
+      "aiAssisted": true
+    }
+  ]
+}

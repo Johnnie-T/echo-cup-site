@@ -1,0 +1,13 @@
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# 系统 / 编辑器
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# 注意：dist/ 需要提交进仓库。
+# Cloudflare Pages 的构建命令留空，直接发布 dist/ 目录。
