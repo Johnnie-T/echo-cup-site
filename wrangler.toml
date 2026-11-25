@@ -1,0 +1,14 @@
+# Cloudflare Workers 静态资源发布配置
+#
+# 作用：告诉 `npx wrangler deploy` 把仓库里的 dist/ 当成静态站点发布，
+# 而不是去找一个 JavaScript 入口文件（我们压根没有入口文件）。
+#
+# name 必须和 Cloudflare 控制台里的 Worker 名称一致，否则会部署成另一个 Worker。
+
+name = "echo-cup-site"
+compatibility_date = "2026-11-01"
+
+[assets]
+directory = "./dist"
+# 访问不存在的路径时，返回 dist/404.html
+not_found_handling = "404-page"
