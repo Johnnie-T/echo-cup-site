@@ -124,17 +124,23 @@ git remote add origin https://github.com/<你的账号>/<仓库名>.git
 git push -u origin main
 ```
 
-然后：
+然后按下面四项填（本仓库已经适配好，照抄即可）：
 
-1. 打开 <https://dash.cloudflare.com/> → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
-2. 选中这个仓库
-3. **Build command** 留空（静态文件已经生成好了），**Build output directory** 填 `dist`
-4. 保存，等一两分钟，会给你一个 `xxx.pages.dev` 网址
-5. 想用自己的域名：项目 → **Custom domains** → 填域名 → 按提示加一条 CNAME 记录，证书自动签发
+| 设置项 | 填什么 |
+|---|---|
+| Project name | `echo-cup-site` |
+| Production branch | `main` |
+| Framework preset | `None`（不要选任何框架） |
+| Build command | `python3 scripts/build.py` |
+| Build output directory | `dist` |
 
-> 如果你不想让 Cloudflare 在云端跑 Python，就把 `dist/` 提交进仓库，构建命令留空直接发布即可。另一种做法是每次本地跑完 `build.py` 再 push。
+保存后 Cloudflare 会自动跑一次构建，一两分钟后给你 `echo-cup-site.pages.dev` 这个网址。
 
-以后更新：改完内容 → `python scripts/build.py` → `git add . && git commit -m "更新"` → `git push`，网站自动重新发布。
+> 如果构建日志里报 `python3: command not found`，把 **Build command 改成留空**——`dist/` 已经提交进仓库，Cloudflare 会直接发布现成的文件，其余不变。
+
+想用自己的域名：项目 → **Custom domains** → **Set up a custom domain** → 填域名 → 按提示加一条 CNAME 记录，证书自动签发。
+
+以后更新：`git push` 之后 GitHub Pages 和 Cloudflare Pages 会**各自**重新构建发布，两边同时更新。
 
 ---
 
